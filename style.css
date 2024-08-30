@@ -1,0 +1,263 @@
+body {
+    background-image: url('./images/bg-pattern-desktop.svg');
+    height: 90vh;
+    width: 98vw;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Josefin Sans';
+}
+
+.container {
+    width: 75%;
+    height: 85%;
+    margin-top: 2%;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 2px 2px 4px 1px rgb(172, 165, 165);
+}
+
+.container .content {
+    width: 60%;
+    height: 100%;
+    padding: 4% 8%;
+}
+
+.container .content h1 {
+    font-size: 38px;
+    margin-top: 40px;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: hsl(0, 6%, 24%);
+}
+
+.container .content h1 span.we {
+    display: block;
+    color: hsl(0, 36%, 70%);
+}
+
+.container .content p.default {
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: hsl(0, 36%, 70%);
+}
+
+.container .content p.require {
+    display: none;
+}
+
+.container .content .input-field {
+    position: relative;
+}
+
+.container .content .input-field form input#email {
+    width: 55%;
+    padding: 20px 15px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    outline: none;
+    pointer-events: auto;
+    border: 1px solid rgb(255, 228, 228);
+}
+
+.container .content .input-field form input#email+img.error {
+    top: 16px;
+    margin-left: -55px;
+    position: absolute;
+    display: none;
+}
+
+.container .content .input-field form input#submit {
+    margin-left: -30px;
+    width: 25%;
+    height: 58px;
+    border-radius: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    color: rgb(255, 230, 230);
+    background-color: hsl(0, 36%, 70%);
+    box-shadow: 1px 1px 9px 2px hsl(0, 36%, 70%);
+}
+
+.container .content .input-field form input#submit:hover {
+    background-color: rgb(248, 215, 215);
+    color: hsl(0, 26%, 55%);
+}
+
+.container .content .input-field form img.arrow-right {
+    width: 32px;
+    height: 32px;
+    margin-left: -80px;
+    margin-bottom: -10px;
+    cursor: pointer;
+}
+
+.container .content .input-field form img.arrow-right+p.error-message {
+    color: hsl(0, 87%, 60%);
+    display: none;
+}
+
+.container .desktop-design {
+    width: 40%;
+    height: 100%;
+}
+
+.container div.mobile {
+    display: none;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/*                       MEDIA QUERIES                      */
+
+
+@media(max-width:1200px) {
+    .container .content .input-field form img.arrow-right {
+        margin-left: -65px;
+    }
+}
+
+@media(min-width:673.6px) and (max-width:1001.6px) {
+    .container .content .input-field form img.arrow-right {
+        margin-left: -50px;
+    }
+}
+
+@media(min-width:1200px) {
+    .container .content .input-field form img.arrow-right {
+        margin-left: -70px;
+    }
+}
+
+@media(min-width:1300px) {
+    .container .content .input-field form img.arrow-right {
+        margin-left: -80px;
+    }
+}
+
+
+@media (min-width:673.6px) and (max-width:1000px) {
+    .container .content p.default {
+        display: none;
+    }
+
+    .container .content p.require {
+        display: block;
+        line-height: 1.6;
+        color: hsl(0, 36%, 70%);
+    }
+
+    .container .content {
+        width: 50%;
+        padding: 3.5% 7%;
+    }
+
+    .container .desktop-design {
+        width: 50%;
+    }
+}
+
+@media(max-width:750px) {
+    .container .content {
+        width: 45%;
+        padding: 3% 6%;
+    }
+
+    .container .desktop-design {
+        width: 55%;
+    }
+}
+
+@media(max-width:672px) {
+
+    body {
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+        flex-direction: column-reverse;
+        border: none;
+        box-shadow: none;
+        margin: -9px -4px -4px -12px;
+    }
+
+    .container .content .desktop-logo,
+    .container .desktop-design {
+        display: none;
+    }
+
+    .container div.mobile {
+        display: block;
+        width: 100%;
+        height: 40%;
+    }
+
+    .container div.mobile .mobile-design {
+        width: 100%;
+        height: 90%;
+    }
+
+    .container div.mobile .mobile-logo {
+        padding: 35px;
+    }
+
+    .container .content {
+        margin: 20px;
+        width: 84%;
+        height: 60%;
+    }
+
+    .container .content .input-field {
+        margin-top: 50px;
+    }
+
+    .container .content .input-field form input#email {
+        width: 65%;
+    }
+
+    .container .content .input-field form input#submit {
+        cursor: pointer;
+        width: 30%;
+        height: 58px;
+    }
+
+    .container .content .input-field form img.arrow-right {
+        margin-left: -20%;
+    }
+}
+
+/* @media(max-width:233.6px) {
+    .container .content {
+        margin: 9px;
+    }
+
+    .container .content .input-field {
+        margin-top: 10px;
+    }
+
+    .container .content .input-field form img.arrow-right {
+        margin-left: -9%;
+    }
+} */
